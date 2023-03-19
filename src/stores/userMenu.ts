@@ -1,4 +1,4 @@
-import { action, makeAutoObservable, makeObservable, observable } from 'mobx'
+import { action, makeAutoObservable } from 'mobx'
 
 interface DataType {
     name: string
@@ -44,12 +44,9 @@ export class UserMenu {
     }
 
     @action
-    getMenuData() {
-        fetch('../userMenuData.json')
-            .then((res) => res.json())
-            .then((data) => {
-                this.data = data
-            })
+    async getMenuData() {
+       const res = await fetch('../userMenuData.json')
+       this.data = await res.json();
     }
 }
 

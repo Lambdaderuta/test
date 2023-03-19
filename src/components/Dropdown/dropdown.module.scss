@@ -35,44 +35,9 @@
     }
 }
 
-.userWrapper {
-    display: flex;
-    align-items: center;
-    padding: 8px 12px;
-    gap: 12px;
-}
-
-.avatar {
-    display: block;
-    height: 48px;
-    width: 48px;
-    border-radius: 50%;
-    filter: brightness(200%);
-
-    &__container {
-        position: relative;
-    }
-
-    &__notification {
-        position: absolute;
-        top: -4px;
-        left: 32px;
-    }
-}
-
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
-}
-
-.name {
-    color: #757685;
-}
-
 .list {
     margin: 8px 0 12px;
-    padding: 4px;
+    padding: 0 4px;
 }
 
 .listItem {

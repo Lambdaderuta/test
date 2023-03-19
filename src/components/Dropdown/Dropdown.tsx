@@ -1,10 +1,12 @@
 import { observer } from 'mobx-react-lite'
 import { FC } from 'react'
 
-import { format, formatRelative } from 'date-fns'
+import { format } from 'date-fns'
 import { ru } from 'date-fns/locale'
 
 import notificationIcon from '~/assets/notification.svg'
+
+import { Avatar } from '~/components/Avatar'
 
 import styles from './dropdown.module.scss'
 
@@ -24,32 +26,23 @@ const Dropdown: FC<DropdownPropsType> = observer(({ menuStore }) => {
 
     const hasAlerts = !!alerts.electronicSignatures
 
-    const getAvatarNode = (withNotification = false) => (
-        <div className={styles.userWrapper}>
-            <div className={styles.avatar__container}>
-                <img src={avatarUrl} className={styles.avatar} />
-                {withNotification && (
-                    <img
-                        src={notificationIcon}
-                        className={styles.avatar__notification}
-                        alt="x"
-                    />
-                )}
-            </div>
-            <div className={styles.wrapper}>
-                <span className={styles.orgName}>{organization}</span>
-                <span className={styles.name}>{name}</span>
-            </div>
-        </div>
-    )
-
     return (
         <div className={styles.dropdown}>
             <div className={styles.dropdown__container}>
-                {getAvatarNode(hasAlerts)}
+                <Avatar
+                    name={name}
+                    avatarUrl={avatarUrl}
+                    organization={organization}
+                    withNotification
+                />
             </div>
             <div className={styles.dropdown__content}>
-                {getAvatarNode(hasAlerts)}
+                <Avatar
+                    name={name}
+                    avatarUrl={avatarUrl}
+                    organization={organization}
+                    withNotification
+                />
 
                 <ul className={styles.list}>
                     <li className={styles.listItem}>
@@ -66,18 +59,21 @@ const Dropdown: FC<DropdownPropsType> = observer(({ menuStore }) => {
                             </div>
                         </div>
                     </li>
-                    <li className={styles.listItem}>
+
+                   <li className={styles.listItem}>
                         <div className={styles.listItem__content}>
                             <span>Мои заказы</span>
                             {activeOrders}
                         </div>
                     </li>
+
                     <li className={styles.listItem}>
                         <div className={styles.listItem__content}>
                             <span>Исходящие отклики</span>
                             {responses}
                         </div>
                     </li>
+
                     <li className={styles.listItem}>
                         <div className={styles.listItem__content}>
                             <span>Входящие заказы</span>
@@ -91,9 +87,11 @@ const Dropdown: FC<DropdownPropsType> = observer(({ menuStore }) => {
                             </div>
                         </div>
                     </li>
+
                     <li className={styles.listItem}>
                         <div className={styles.listItem__content}>Кабинет</div>
                     </li>
+
                     <li className={styles.listItem}>
                         <div className={styles.listItem__content}>
                             <span>Электронные подписи</span>
@@ -102,13 +100,25 @@ const Dropdown: FC<DropdownPropsType> = observer(({ menuStore }) => {
                             )}
                         </div>
                     </li>
+
                     <li className={styles.listItem}>
                         <div className={styles.listItem__content}>Выход</div>
                     </li>
                 </ul>
+
                 <div className={styles.divider} />
-                {getAvatarNode()}
-                {getAvatarNode()}
+
+                <Avatar
+                    name={name}
+                    avatarUrl={avatarUrl}
+                    organization={organization}
+                />
+
+                <Avatar
+                    name={name}
+                    avatarUrl={avatarUrl}
+                    organization={organization}
+                />
             </div>
         </div>
     )

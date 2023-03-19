@@ -1,0 +1,36 @@
+.avatar {
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        padding: 8px 12px;
+        gap: 12px;
+    }
+
+    &__container {
+        position: relative;
+    }
+
+    &__image {
+        display: block;
+        height: 48px;
+        width: 48px;
+        border-radius: 50%;
+        filter: brightness(200%);
+    }
+
+    &__notification {
+        position: absolute;
+        top: -4px;
+        left: 32px;
+    }
+}
+
+.name {
+    color: #757685;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+    }
+}
