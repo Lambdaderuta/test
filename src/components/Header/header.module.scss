@@ -1,0 +1,43 @@
+.header {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    padding-left: 96px;
+    padding-right: 84px;
+}
+
+.logo {
+    height: 34px;
+}
+
+.menu {
+    display: flex;
+    gap: 32px;
+    margin-right: 106px;
+}
+
+.menuItem {
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.createOrderButton {
+    background-color: #0c1bb1;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.dropdown {
+    display: flex;
+    width: 308px;
+    margin-left: 14px;
+}

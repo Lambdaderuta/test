@@ -1,0 +1,18 @@
+{
+    "name": "Стародубцев И.В.",
+    "avatarUrl": "https://s3-alpha-sig.figma.com/img/4fdd/7870/8198c526dc48db57c46c7467b660770d?Expires=1679875200&Signature=lvt34F0WzLxnmeZzBqdZ5x7wOBeHKnruWYP2FsqRmhbuRhMlToCaXQAmAV6a9iJj4O2~FFMlf-nmZjAW94fbkiTpkZvZDarmOPGAXFHiEJixOKY0G-r30KIs4~optE0uWHgywgesTvcMnKkOmEX65emkPuvZzwEHp1cM2SxVJdF8JE2d8vz88JiVdoIYNxsljsxtLkx6CkL2ZzUT0gRWGigG-LJqz8qzjkSM7co~Qk9jsYPkfcoAGhYjJAVvICt60KDjbzoe~JJwvSOotosIRFKPFIrZrf08bm4EXA9f8rimimbp6H95WvL1KMgfi7yH4y5VJmm5VyWsY-B5yRsmGg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+    "organization": "Метрострой Инвест",
+    "activeOrders": 3,
+    "responses": 17,
+    "activePlan": {
+        "name": "Тариф Unlimited PRO",
+        "expires": 1692892897
+    },
+    "incomingOrders": {
+        "all": 8,
+        "new": 2
+    },
+    "alerts": {
+        "electronicSignatures": true
+    }
+}

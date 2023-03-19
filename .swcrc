@@ -1,0 +1,15 @@
+{
+    "jsc": {
+      "parser": {
+        "syntax": "typescript", // "ecmascript" if you use JavaScript
+        "decorators": true
+      },
+      "transform": {
+        // Optional if you use TypeScript
+        // Required if you use JavaScript
+        "legacyDecorator": true
+      },
+      // MobX 5/6
+      "loose": false
+    }
+  }

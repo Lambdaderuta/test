@@ -1,0 +1,130 @@
+.dropdown {
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+    display: inline-block;
+
+    &__container {
+        color: #000;
+        padding: 0;
+        background-color: #fff;
+        border: none;
+    }
+
+    &:hover &__container {
+        cursor: pointer;
+    }
+
+    &__content {
+        display: none;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        z-index: 1;
+        box-shadow: 0px 23px 80px rgba(0, 0, 0, 0.03),
+            0px 8.39538px 29.2013px rgba(0, 0, 0, 0.0206994),
+            0px 4.0758px 14.1767px rgba(0, 0, 0, 0.0166887),
+            0px 1.99803px 6.94968px rgba(0, 0, 0, 0.0133113),
+            0px 0.790025px 2.74791px rgba(0, 0, 0, 0.00930055);
+        border-radius: 16px;
+    }
+
+    &:hover &__content {
+        display: block;
+        animation: fade_in_show 0.5s;
+    }
+}
+
+.userWrapper {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    gap: 12px;
+}
+
+.avatar {
+    display: block;
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    filter: brightness(200%);
+
+    &__container {
+        position: relative;
+    }
+
+    &__notification {
+        position: absolute;
+        top: -4px;
+        left: 32px;
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+.name {
+    color: #757685;
+}
+
+.list {
+    margin: 8px 0 12px;
+    padding: 4px;
+}
+
+.listItem {
+    list-style-type: none;
+    padding: 8px 12px;
+    cursor: pointer;
+
+    &:hover {
+        background: #f5f5fa;
+        border-radius: 8px;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__dot {
+        display: inline-block;
+        width: 34px;
+        height: 24px;
+        background: #0c1bb1;
+        border-radius: 28px;
+        margin-left: 6px;
+        color: #fff;
+
+        &Inner {
+            padding: 2px 8px 2px 7px;
+        }
+    }
+}
+
+.divider {
+    border: 1px solid #e8ebf0;
+    margin: 12px 12px 0;
+}
+
+.activePlan {
+    display: flex;
+    flex-direction: column;
+
+    &__ends {
+        color: #757685;
+    }
+}
+
+@keyframes fade_in_show {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
