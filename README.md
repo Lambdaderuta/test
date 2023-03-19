@@ -1,0 +1,2 @@
+# test
+yarn && yarn dev
